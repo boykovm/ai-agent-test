@@ -1,0 +1,11 @@
+### Validate, taht env variables are set
+GET http://localhost:{{PORT}}
+
+### Validate chat
+POST http://localhost:{{PORT}}/chat
+Content-Type: application/json
+
+{
+  "message": "What is quantum physics?",
+  "maxTokenCount": 2000
+}
