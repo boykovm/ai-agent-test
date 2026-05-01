@@ -9,3 +9,13 @@ Content-Type: application/json
   "message": "What is quantum physics?",
   "maxTokenCount": 2000
 }
+
+### Validate chat sse
+GET http://localhost:{{PORT}}/chat-stream
+Content-Type: application/json
+
+{
+  "message": "What is quantum physics based quantum?",
+  "maxTokenCount": 2000
+}
+
