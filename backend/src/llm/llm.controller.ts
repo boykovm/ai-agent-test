@@ -7,7 +7,11 @@ export class LlmController {
 
   @Post('/chat')
   async chat(@Body() body: { message: string; maxTokenCount?: number }) {
-    return this.llmService.chat(body.message, body.maxTokenCount);
+    const response = await this.llmService.chat(
+      body.message,
+      body.maxTokenCount,
+    );
+    return { answer: response };
   }
 
   @Sse('/chat-stream')
